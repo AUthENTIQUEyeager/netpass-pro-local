@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --bg: #0f0f0f;
+  --bg2: #141414;
+  --bg3: #1a1a1a;
+  --blue: #2563eb;
+  --blue2: #3b82f6;
+  --green: #16a34a;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
+
+.font-mono { font-family: var(--font-mono) !important; }
+
+@layer components {
+  .gcard {
+    @apply rounded-2xl border border-white/8 bg-[#141414] p-5 transition-colors hover:border-white/12;
+  }
+  .btn-primary {
+    @apply px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium
+           transition-all duration-200 shadow-[0_0_25px_rgba(37,99,235,0.35)]
+           hover:shadow-[0_0_40px_rgba(37,99,235,0.55)] inline-flex items-center gap-2;
+  }
+  .btn-ghost {
+    @apply px-4 py-2 rounded-xl border border-white/10 text-zinc-400 hover:text-white
+           hover:border-white/20 text-sm transition-all duration-200 inline-flex items-center gap-2;
+  }
+  .form-input {
+    @apply w-full bg-white/3 border border-white/8 rounded-xl px-4 py-3 text-sm text-white
+           placeholder-zinc-600 focus:outline-none focus:border-blue-500/50 transition-colors;
+  }
+  .badge-active   { @apply px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-500/12 text-emerald-400 border border-emerald-500/25; }
+  .badge-expired  { @apply px-2 py-0.5 rounded-full text-xs font-medium bg-zinc-500/12 text-zinc-400 border border-zinc-500/20; }
+  .badge-disabled { @apply px-2 py-0.5 rounded-full text-xs font-medium bg-red-500/10 text-red-400 border border-red-500/20; }
+  .badge-pending  { @apply px-2 py-0.5 rounded-full text-xs font-medium bg-amber-500/10 text-amber-400 border border-amber-500/20; }
+}
