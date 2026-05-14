@@ -38,4 +38,4 @@ forfaitsRouter.delete('/:id', auth, async (req, res) => {
   res.json({ message: 'Forfait désactivé' });
 });
 
-module.exports.forfaitsRouter = forfaitsRouter;
+module.exports = forfaitsRouter; 

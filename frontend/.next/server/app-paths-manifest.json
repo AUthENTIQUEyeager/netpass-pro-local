@@ -1,0 +1,14 @@
+{
+  "/_not-found": "app/_not-found.js",
+  "/page": "app/page.js",
+  "/forfaits/page": "app/forfaits/page.js",
+  "/ticket/page": "app/ticket/page.js",
+  "/admin/forfaits/page": "app/admin/forfaits/page.js",
+  "/admin/login/page": "app/admin/login/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/admin/paiements/page": "app/admin/paiements/page.js",
+  "/admin/routeurs/page": "app/admin/routeurs/page.js",
+  "/admin/utilisateurs/page": "app/admin/utilisateurs/page.js",
+  "/admin/tickets/page": "app/admin/tickets/page.js",
+  "/admin/parametres/page": "app/admin/parametres/page.js"
+}
